@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b0d10;
+  color: #e0e6ed;
+  font-family: 'Rajdhani', sans-serif;
+  min-height: 100vh;
+}
+
+.garage-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.garage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #1a222d;
+  margin-bottom: 30px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.garage-icon {
+  font-size: 28px;
+}
+
+.logo-box h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.logo-box h1 span {
+  color: #00f0ff;
+}
+
+.garage-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  color: #ff9900;
+  background: rgba(255, 153, 0, 0.1);
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 153, 0, 0.3);
+  border-radius: 20px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff9900;
+  border-radius: 50%;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.car-card {
+  background: #12161f;
+  border: 1px solid #1e2633;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 190px;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.card-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.car-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.car-info {
+  font-size: 14px;
+  color: #9aa8b9;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.8em;
+}
+
+.car-specs {
+  display: flex;
+  justify-content: space-between;
+  background: #0a0d12;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #c4d1e1;
+  margin-bottom: 16px;
+  border: 1px solid #1a202c;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff9900;
+}
+
+.per-day {
+  font-size: 12px;
+  color: #6c7d93;
+}
+
+.rent-btn {
+  background: linear-gradient(135deg, #00f0ff, #0088ff);
+  color: #000000;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: #121720;
+  border: 1px solid #00f0ff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 440px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #8a99ad;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-card h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.modal-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-calc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-calc input {
+  width: 70px;
+  background: #0a0d12;
+  border: 1px solid #2a3547;
+  color: #00f0ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  padding: 6px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.modal-total {
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #1f2a38;
+  padding-top: 12px;
+}
+
+.modal-total span {
+  font-family: 'Orbitron', sans-serif;
+  color: #ff9900;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.confirm-btn {
+  width: 100%;
+  background: #ff9900;
+  color: #000000;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
